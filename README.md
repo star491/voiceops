@@ -6,7 +6,7 @@ A customer-support agent for the fictional Indian store **ZentroMart**. It answe
 customer audio -> Gnani STT -> spoken numbers -> digits -> Agent (LLM + hybrid RAG + tools + memory) -> Gnani TTS -> spoken reply
 ```
 
-GitHub: `REPO_URL_PLACEHOLDER`
+**GitHub:** https://github.com/star491/voiceops  ·  **Author / team:** Simran Varma
 
 ## Results on the practice set
 
