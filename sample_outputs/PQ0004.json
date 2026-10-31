@@ -1,0 +1,21 @@
+{
+  "file": "PQ0004.wav",
+  "conversation": "PQ0004",
+  "heard": "can i schedule a delivery at midnight",
+  "stt_error": "",
+  "audio_out": "outputs\\PQ0004.reply.wav",
+  "reply": "Sorry, I don't have information about that. I can connect you to a colleague who can help.",
+  "language": "en",
+  "search_query": "Schedule a delivery for midnight.",
+  "used_chunks": [],
+  "retrieved_chunks": [
+    "CAN-2",
+    "DEL-1",
+    "CAN-3",
+    "DEL-6",
+    "DEL-3",
+    "DEL-4"
+  ],
+  "chunk_texts": {},
+  "tool_calls": []
+}

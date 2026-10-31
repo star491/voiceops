@@ -1,0 +1,25 @@
+{
+  "file": "PQ0003.wav",
+  "conversation": "PQ0003",
+  "heard": "how fast are refunds to the zentromart wallet",
+  "stt_error": "",
+  "audio_out": "outputs\\PQ0003.reply.wav",
+  "reply": "Refunds to your ZentroMart Wallet are instant, usually within 2 hours.",
+  "language": "en",
+  "search_query": "refund timeline to ZentroMart wallet",
+  "used_chunks": [
+    "REF-2"
+  ],
+  "retrieved_chunks": [
+    "REF-2",
+    "REF-3",
+    "PAY-4",
+    "RET-7",
+    "DEL-4",
+    "REF-1"
+  ],
+  "chunk_texts": {
+    "REF-2": "Refunds go back to the original payment method. Timelines are counted in business days from the day the refund is initiated.\n\n| Payment method | Time to reach you |\n| --- | --- |\n| UPI | 1 to 3 business days |\n| Credit or debit card | 5 to 7 business days |\n| Net banking | 3 to 5 business days |\n| ZentroMart Wallet | Instant, within 2 hours |\n| Bank transfer (NEFT) for cash-on-delivery orders | 5 to 7 business days |\n| ZentroMart Wallet for cash-on-delivery orders | Instant, within 2 hours |"
+  },
+  "tool_calls": []
+}

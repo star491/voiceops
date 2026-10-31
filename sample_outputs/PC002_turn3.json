@@ -1,0 +1,134 @@
+{
+  "file": "PC002_turn3.wav",
+  "conversation": "PC002",
+  "heard": "last four digits four thousand five hundred thirty three hai",
+  "stt_error": "",
+  "audio_out": "outputs\\PC002_turn3.reply.wav",
+  "reply": "Ek ticket banaya gaya hai aur Priority Resolution team aapse jald sampark karegi. कृपया आगे के अपडेट के लिए अपना फ़ोन चालू रखें।",
+  "language": "hi-en",
+  "search_query": "What is the status of my order 8978237?",
+  "used_chunks": [
+    "ESC-1",
+    "ESC-2",
+    "orders.csv:89782837"
+  ],
+  "retrieved_chunks": [
+    "TRK-1",
+    "REF-1",
+    "STY-2",
+    "ESC-3",
+    "PAY-2",
+    "TRK-2"
+  ],
+  "chunk_texts": {
+    "ESC-1": "Hand over at once when any of these is true:\n\n1. **Damaged, defective or wrong item worth more than ₹10,000.**\n2. **Customer reports an order, payment or account activity they did not make.**\n3. **Customer mentions legal action, a consumer court or a police complaint.**\n4. **Third or later contact about the same issue within 7 days.**\n5. **Refund more than 3 business days past its maximum timeline.**\n6. **Customer asks for a human agent.**\n7. **Product safety risk such as a swelling battery, burning smell, sparks or injury.**\n\nFor the repeat-contact rule, use the `contacts_last_7_days` field returned by order lookup. It counts earlier contacts only, not the current one. Escalate when it is 2 or more.",
+    "ESC-2": "Create a ticket with `create_ticket` before handing over. Tell the customer a human colleague will contact them, and never promise an outcome, amount or time beyond what a policy states."
+  },
+  "tool_calls": [
+    {
+      "tool": "lookup_order",
+      "args": {
+        "order_id": "89782837",
+        "verification_value": "provided"
+      },
+      "result": {
+        "found": true,
+        "verified": true,
+        "order_id": "89782837",
+        "customer_id": "C100181",
+        "placed_at": "2026-10-05T08:05",
+        "status": "delivered",
+        "payment_method": "upi",
+        "delivery_type": "standard",
+        "delivery_pincode": "781006",
+        "promised_date": "2026-10-15",
+        "shipped_on": "2026-10-06",
+        "delivered_on": "2026-10-15",
+        "delivery_attempts": 1,
+        "subtotal_inr": 53127,
+        "coupon_code": null,
+        "coupon_discount_inr": null,
+        "coupon_min_order_inr": null,
+        "delivery_fee_inr": 0,
+        "cod_fee_inr": 0,
+        "total_inr": 53127,
+        "contacts_last_7_days": 0,
+        "cancellation_refund_initiated_on": null,
+        "cancellation_refund_method": null,
+        "cancellation_refund_amount_inr": null,
+        "cancellation_rrn": null,
+        "rto_refund_initiated_on": null,
+        "rto_refund_method": null,
+        "rto_refund_amount_inr": null,
+        "rto_rrn": null,
+        "express_late_credit_inr": null,
+        "express_late_credit_on": null,
+        "return_sku": null,
+        "return_line_no": null,
+        "return_qty": null,
+        "return_reason": null,
+        "return_status": null,
+        "return_requested_on": null,
+        "return_pickup_on": null,
+        "return_qc_passed_on": null,
+        "return_refund_initiated_on": null,
+        "return_refund_method": null,
+        "return_refund_amount_inr": null,
+        "return_refund_completed_on": null,
+        "return_rrn": null,
+        "return_reverse_pickup_fee_inr": null,
+        "damage_sku": "ELE-0021",
+        "damage_issue": "damaged",
+        "damage_reported_at": "2026-10-17T02:41",
+        "damage_hours_after_delivery": 40,
+        "damage_photos_attached": false,
+        "damage_status": "priority_resolution",
+        "timeline": "2026-10-05T08:05 placed ; 2026-10-05T10:26 packed ; 2026-10-06T16:23 shipped ; 2026-10-15T10:41 delivered",
+        "items": [
+          {
+            "order_id": "89782837",
+            "line_no": 1,
+            "sku": "ELE-0013",
+            "title": "Kestrel K7 Smartphone 256 GB, Grey",
+            "return_category": "electronics",
+            "qty": 1,
+            "unit_price_inr": 20499
+          },
+          {
+            "order_id": "89782837",
+            "line_no": 2,
+            "sku": "FSH-0038",
+            "title": "Sootra Canvas Tote Bag, Green",
+            "return_category": "fashion",
+            "qty": 1,
+            "unit_price_inr": 979
+          },
+          {
+            "order_id": "89782837",
+            "line_no": 3,
+            "sku": "ELE-0021",
+            "title": "Zentro Vista 43-inch 4K Smart TV, Grey",
+            "return_category": "electronics",
+            "qty": 1,
+            "unit_price_inr": 31649
+          }
+        ],
+        "customer_first_name": "Kabir",
+        "is_plus": false
+      }
+    },
+    {
+      "tool": "create_ticket",
+      "args": {
+        "intent": "damaged_item",
+        "order_id": "89782837",
+        "reason": "Damaged item worth more than ₹10,000",
+        "summary": "Customer reports damaged Zentro Vista 43-inch 4K Smart TV (SKU ELE-0021) worth 31649 rupees delivered on 15 October 2026. Issue flagged for priority resolution."
+      },
+      "result": {
+        "created": true,
+        "ticket_id": "TKT8a5442ceb4a64b39874bb6ad98b86541"
+      }
+    }
+  ]
+}

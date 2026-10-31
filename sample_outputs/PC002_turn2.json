@@ -1,0 +1,37 @@
+{
+  "file": "PC002_turn2.wav",
+  "conversation": "PC002",
+  "heard": "order number hai eight nine seven eight two eight three seven",
+  "stt_error": "",
+  "audio_out": "outputs\\PC002_turn2.reply.wav",
+  "reply": "Kripya apne registered phone ka aakhri 4 ank ya delivery pincode batayenge?",
+  "language": "hi-en",
+  "search_query": "Check status of order 89782837.",
+  "used_chunks": [
+    "IDV-2"
+  ],
+  "retrieved_chunks": [
+    "TRK-2",
+    "TRK-1",
+    "PAY-2",
+    "REF-5",
+    "CAN-1",
+    "REF-1"
+  ],
+  "chunk_texts": {
+    "IDV-2": "Ask for the order ID, then ask for **one** of: the last 4 digits of the registered phone number, or the delivery pincode for that order. Compare with the `phone_last4` or `delivery_pincode` fields from order lookup."
+  },
+  "tool_calls": [
+    {
+      "tool": "lookup_order",
+      "args": {
+        "order_id": "89782837"
+      },
+      "result": {
+        "verification_required": true,
+        "order_id": "89782837",
+        "message": "Ask for the registered phone last 4 digits OR delivery pincode."
+      }
+    }
+  ]
+}

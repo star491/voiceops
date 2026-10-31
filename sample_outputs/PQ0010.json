@@ -1,0 +1,23 @@
+{
+  "file": "PQ0010.wav",
+  "conversation": "PQ0010",
+  "heard": "is the collection free if the urban thread slim fit jeans came torn",
+  "stt_error": "",
+  "audio_out": "outputs\\PQ0010.reply.wav",
+  "reply": "The reverse‑pickup fee is waived for damaged items, so you won’t be charged for collecting the jeans.",
+  "language": "en",
+  "search_query": "Is return pickup free for torn Urban Thread slim fit jeans?",
+  "used_chunks": [
+    "products.csv:FSH-0029"
+  ],
+  "retrieved_chunks": [
+    "DWM-2",
+    "RET-7",
+    "RET-4",
+    "RET-9",
+    "RET-6",
+    "DWM-4"
+  ],
+  "chunk_texts": {},
+  "tool_calls": []
+}

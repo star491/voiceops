@@ -1,0 +1,25 @@
+{
+  "file": "PC002_turn1.wav",
+  "conversation": "PC002",
+  "heard": "hello mujhe order ke baare mein help chaahiye",
+  "stt_error": "",
+  "audio_out": "outputs\\PC002_turn1.reply.wav",
+  "reply": "Namaste, main ZentroMart ka AI assistant hoon. Kripya apna order ID batayenge?",
+  "language": "hi-en",
+  "search_query": "help with my order",
+  "used_chunks": [
+    "STY-1"
+  ],
+  "retrieved_chunks": [
+    "CAN-1",
+    "TRK-2",
+    "TRK-1",
+    "CAN-4",
+    "CAN-3",
+    "CAN-2"
+  ],
+  "chunk_texts": {
+    "STY-1": "Introduce yourself as ZentroMart's AI support assistant in your first reply."
+  },
+  "tool_calls": []
+}

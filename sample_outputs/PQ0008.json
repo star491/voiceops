@@ -1,0 +1,42 @@
+{
+  "file": "PQ0008.wav",
+  "conversation": "PQ0008",
+  "heard": "credit card vaala refund seventeenth october twenty twenty six ko shuru hua",
+  "stt_error": "",
+  "audio_out": "outputs\\PQ0008.reply.wav",
+  "reply": "Your refund should reach your credit card between 24 October 2026 and 27 October 2026.",
+  "language": "en",
+  "search_query": "refund timeline for credit card refund started on 17 October 2026",
+  "used_chunks": [
+    "REF-2",
+    "KB-00.3"
+  ],
+  "retrieved_chunks": [
+    "REF-2",
+    "RET-8",
+    "RET-7",
+    "KB-00.2",
+    "KB-00.3",
+    "REF-6"
+  ],
+  "chunk_texts": {
+    "REF-2": "Refunds go back to the original payment method. Timelines are counted in business days from the day the refund is initiated.\n\n| Payment method | Time to reach you |\n| --- | --- |\n| UPI | 1 to 3 business days |\n| Credit or debit card | 5 to 7 business days |\n| Net banking | 3 to 5 business days |\n| ZentroMart Wallet | Instant, within 2 hours |\n| Bank transfer (NEFT) for cash-on-delivery orders | 5 to 7 business days |\n| ZentroMart Wallet for cash-on-delivery orders | Instant, within 2 hours |",
+    "KB-00.3": "A business day is Monday to Saturday, excluding the warehouse holidays below. Refund and logistics timelines are counted in business days. Return windows are counted in calendar days.\n\n| Date | Holiday |\n| --- | --- |\n| 2026-08-15 | Independence Day |\n| 2026-10-02 | Gandhi Jayanti |\n| 2026-10-19 | Warehouse closure (festival) |\n| 2026-11-09 | Warehouse closure (festival) |"
+  },
+  "tool_calls": [
+    {
+      "tool": "date_calc",
+      "args": {
+        "days": 5,
+        "days_max": 7,
+        "op": "business_day_range",
+        "start": "2026-10-17"
+      },
+      "result": {
+        "earliest": "2026-10-24",
+        "latest": "2026-10-27",
+        "rule": "business days = Monday to Saturday, excluding warehouse holidays"
+      }
+    }
+  ]
+}
